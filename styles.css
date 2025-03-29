@@ -1,0 +1,167 @@
+/* Reset e estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Estilização das abas */
+.abas-container {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: -5px;
+}
+
+.aba {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #e57373;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+.aba.ativa {
+    background-color: #ff8a80;
+}
+
+/* Container do filtro */
+.filtro-container {
+    width: 300px;
+    background-color: #c62828;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+/* Campos de filtros */
+.filtros {
+    padding: 10px 0;
+}
+
+/* Toggle de opções */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Slider de três fases */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+    width: 90px;
+    height: 24px;
+    background-color: #ddd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.slider-thumb {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* Inputs */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Datas */
+.datas {
+    margin-top: 10px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group input {
+    width: 48%;
+}
+
+/* Botão Aplicar */
+.btn-aplicar {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-aplicar:hover {
+    background-color: #bdbdbd;
+}
+
+/* Botão de três estágios */
+#toggle-btn {
+    width: 100px;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-btn.focos {
+    background-color: #4CAF50; /* Verde */
+}
+
+#toggle-btn.area-calor {
+    background-color: #FF9800; /* Laranja */
+}
+
+#toggle-btn.riscos {
+    background-color: #D32F2F; /* Vermelho */
+}

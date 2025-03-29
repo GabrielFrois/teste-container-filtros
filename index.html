@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Mapa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="abas-container">
+        <button class="aba ativa">Mapa</button>
+        <button class="aba">Gráfico</button>
+    </div>
+
+    <div class="filtro-container">
+        <div class="filtros">
+            <div class="toggle-container">
+                <span>Focos</span>
+                <span>Área de Calor</span>
+                <span>Riscos</span>
+            </div>
+
+
+
+
+
+
+            <div class="toggle-container">
+                <button id="toggle-btn">Focos</button>
+            </div>
+
+
+            
+            <div class="filtros">
+                <div class="toggle-container">
+                    <span>Focos</span>
+                    <span>Área de Calor</span>
+                    <span>Riscos</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+
+
+                <div class="slider-container">
+                    <span class="label">Focos</span>
+                    <div class="slider">
+                        <div class="slider-thumb"></div>
+                    </div>
+                    <span class="label">Área de Calor</span>
+                    <span class="label">Riscos</span>
+                </div>
+
+                
+            
+
+
+
+
+
+            <label>Estados</label>
+            <input type="text" placeholder="Selecione um estado">
+
+            <label>Biomas</label>
+            <input type="text" placeholder="Selecione um bioma">
+
+            <div class="datas">
+                <label>Datas:</label>
+                <div class="input-group">
+                    <input type="date">
+                    <input type="date">
+                </div>
+            </div>
+
+            <button class="btn-aplicar">Aplicar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
