@@ -29,23 +29,23 @@ body {
     padding: 8px 15px;
     border: none;
     cursor: pointer;
-    background-color: #e57373;
+    background-color: #ff9595;
     color: black;
     font-weight: bold;
     border-radius: 8px 8px 0 0;
 }
 
 .aba.ativa {
-    background-color: #ff8a80;
+    background-color: #d32f2f;
 }
 
 /* Container do filtro */
 .filtro-container {
     width: 300px;
-    background-color: #c62828;
+    background-color: #d32f2f;
     padding: 15px;
     border-radius: 8px;
-    color: white;
+    color: black;
 }
 
 /* Campos de filtros */
@@ -53,32 +53,60 @@ body {
     padding: 10px 0;
 }
 
-/* Toggle de opções */
+/* Opções de estado */
+.toggle-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Botão de alternância */
 .toggle-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
-/* Slider de três fases */
-.slider-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+#toggle-btn {
+    width: 100px;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50; /* Cor inicial (verde) */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.label {
-    font-size: 14px;
-    font-weight: bold;
+/* Classes de cor do botão */
+#toggle-btn.focos {
+    background-color: #4CAF50; /* Verde */
+}
+
+#toggle-btn.area-calor {
+    background-color: #FF9800; /* Laranja */
+}
+
+#toggle-btn.riscos {
+    background-color: #D32F2F; /* Vermelho */
+}
+
+/* Ajustando a largura do slider */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .slider {
     position: relative;
-    width: 90px;
+    width: 115px; /* Aumentado de 90px para 120px */
     height: 24px;
     background-color: #ddd;
     border-radius: 12px;
+    border: 1px solid white;
     display: flex;
     align-items: center;
     padding: 2px;
@@ -87,12 +115,26 @@ body {
 
 .slider-thumb {
     position: absolute;
-    width: 30px;
+    width: 40px; /* Aumentado um pouco para melhor visibilidade */
     height: 20px;
     background-color: #333;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
+
+/* Posições ajustadas para que o botão não saia do slider */
+.slider[data-stage="0"] .slider-thumb {
+    transform: translateX(0);
+}
+
+.slider[data-stage="1"] .slider-thumb {
+    transform: translateX(40px); /* Ajustado para a nova largura */
+}
+
+.slider[data-stage="2"] .slider-thumb {
+    transform: translateX(80px); /* Última posição sem sair do limite */
+}
+
 
 /* Inputs */
 label {
@@ -120,8 +162,9 @@ input {
 }
 
 .input-group input {
-    width: 48%;
+    width: 100%;
 }
+
 
 /* Botão Aplicar */
 .btn-aplicar {
@@ -139,29 +182,4 @@ input {
 
 .btn-aplicar:hover {
     background-color: #bdbdbd;
-}
-
-/* Botão de três estágios */
-#toggle-btn {
-    width: 100px;
-    padding: 8px;
-    border: none;
-    border-radius: 20px;
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#toggle-btn.focos {
-    background-color: #4CAF50; /* Verde */
-}
-
-#toggle-btn.area-calor {
-    background-color: #FF9800; /* Laranja */
-}
-
-#toggle-btn.riscos {
-    background-color: #D32F2F; /* Vermelho */
 }

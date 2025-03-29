@@ -14,65 +14,82 @@
 
     <div class="filtro-container">
         <div class="filtros">
-            <div class="toggle-container">
+            
+            <!-- Opções de estado -->
+            <div class="toggle-labels">
                 <span>Focos</span>
                 <span>Área de Calor</span>
                 <span>Riscos</span>
             </div>
 
-
-
-
-
-
-            <div class="toggle-container">
-                <button id="toggle-btn">Focos</button>
+            <!-- Slider -->
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slider-thumb"></div>
+                </div>
             </div>
 
-
+            <label for="estado">Estados</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="ac">Acre</option>
+                <option value="al">Alagoas</option>
+                <option value="ap">Amapá</option>
+                <option value="am">Amazonas</option>
+                <option value="ba">Bahia</option>
+                <option value="ce">Ceará</option>
+                <option value="df">Distrito Federal</option>
+                <option value="es">Espírito Santo</option>
+                <option value="go">Goiás</option>
+                <option value="ma">Maranhão</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="pa">Pará</option>
+                <option value="pb">Paraíba</option>
+                <option value="pr">Paraná</option>
+                <option value="pe">Pernambuco</option>
+                <option value="pi">Piauí</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="rn">Rio Grande do Norte</option>
+                <option value="rs">Rio Grande do Sul</option>
+                <option value="ro">Rondônia</option>
+                <option value="rr">Roraima</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="sp">São Paulo</option>
+                <option value="se">Sergipe</option>
+                <option value="to">Tocantins</option>
+            </select>
             
-            <div class="filtros">
-                <div class="toggle-container">
-                    <span>Focos</span>
-                    <span>Área de Calor</span>
-                    <span>Riscos</span>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-
-
-                <div class="slider-container">
-                    <span class="label">Focos</span>
-                    <div class="slider">
-                        <div class="slider-thumb"></div>
-                    </div>
-                    <span class="label">Área de Calor</span>
-                    <span class="label">Riscos</span>
-                </div>
-
-                
+            <label for="bioma">Biomas</label>
+            <select id="bioma" name="bioma">
+                <option value="">Selecione um bioma</option>
+                <option value="amazonia">Amazônia</option>
+                <option value="caatinga">Caatinga</option>
+                <option value="cerrado">Cerrado</option>
+                <option value="mata-atlantica">Mata Atlântica</option>
+                <option value="pantanal">Pantanal</option>
+                <option value="pampa">Pampa</option>
+            </select>
             
 
-
-
-
-
-            <label>Estados</label>
-            <input type="text" placeholder="Selecione um estado">
-
-            <label>Biomas</label>
-            <input type="text" placeholder="Selecione um bioma">
 
             <div class="datas">
                 <label>Datas:</label>
                 <div class="input-group">
-                    <input type="date">
-                    <input type="date">
+                    <div>
+                        <label for="inicio">Início:</label>
+                        <input type="date" id="inicio" name="inicio" class="campo-data">
+                    </div>
+                    <div>
+                        <label for="fim">Fim:</label>
+                        <input type="date" id="fim" name="fim" class="campo-data">
+                    </div>
                 </div>
             </div>
+            
+            
+                     
 
             <button class="btn-aplicar">Aplicar</button>
         </div>
