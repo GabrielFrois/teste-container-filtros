@@ -21,7 +21,7 @@ body {
     gap: 5px;
     justify-content: flex-start;
     width: 80%;
-    max-width: 300px;
+    max-width: 350px;
     margin-bottom: -5px;
 }
 
@@ -41,7 +41,7 @@ body {
 
 /* Container do filtro */
 .filtro-container {
-    width: 300px;
+    width: 350px;
     background-color: #d32f2f;
     padding: 15px;
     border-radius: 8px;
@@ -55,6 +55,7 @@ body {
 
 /* Opções de estado */
 .toggle-labels {
+    width: 300px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -102,7 +103,7 @@ body {
 
 .slider {
     position: relative;
-    width: 115px; /* Aumentado de 90px para 120px */
+    width: 305px; /* Aumentado para 300px */
     height: 24px;
     background-color: #ddd;
     border-radius: 12px;
@@ -115,7 +116,7 @@ body {
 
 .slider-thumb {
     position: absolute;
-    width: 40px; /* Aumentado um pouco para melhor visibilidade */
+    width: 100px; /* Aumentado para 100px (para garantir melhor visibilidade) */
     height: 20px;
     background-color: #333;
     border-radius: 10px;
@@ -128,13 +129,12 @@ body {
 }
 
 .slider[data-stage="1"] .slider-thumb {
-    transform: translateX(40px); /* Ajustado para a nova largura */
+    transform: translateX(100px); /* Ajustado para 100px */
 }
 
 .slider[data-stage="2"] .slider-thumb {
-    transform: translateX(80px); /* Última posição sem sair do limite */
+    transform: translateX(00px); /* Posição final (sem ultrapassar o limite) */
 }
-
 
 /* Inputs */
 label {
@@ -164,7 +164,6 @@ input {
 .input-group input {
     width: 100%;
 }
-
 
 /* Botão Aplicar */
 .btn-aplicar {
