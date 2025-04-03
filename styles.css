@@ -141,6 +141,7 @@ label {
     display: block;
     margin: 10px 0 5px;
     font-size: 14px;
+    width: 150px;
 }
 
 input {
@@ -167,9 +168,10 @@ input {
 
 /* Botão Aplicar */
 .btn-aplicar {
-    width: 100%;
+    width: 47%;
     padding: 8px;
     margin-top: 10px;
+    margin-left: 170px;
     border: none;
     background-color: #e0e0e0;
     color: black;
